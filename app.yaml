@@ -1,0 +1,9 @@
+runtime: python37
+
+handlers:
+- url: /aesthetics
+  secure: always
+  static_dir: aesthetics
+- url: /.*
+  secure: always
+  script: auto

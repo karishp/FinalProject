@@ -1,0 +1,208 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button, input {
+    font: inherit;
+}
+
+h1 {
+    color: #D4C477;
+    font-family: 'Gamja Flower', cursive;
+}
+
+.sub-breed-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sizer {
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+.sub-breed-image {
+    position: relative;
+}
+
+.fetch-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-appearance: none;
+    background-image: url(/aesthetics/tennisball.png);
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2em;
+
+
+    position: fixed;
+    width: 100px;
+    height: 105px;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+    background-image: url(/aesthetics/tennisball.png);
+    background-color: transparent;
+    background-size: cover;
+}
+
+.sub-breed-image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.sub-breed-image:nth-child(n + 6) {
+    display: none;
+}
+
+.fetch-less-button {
+    display: none;
+}
+
+.show-all .fetch-less-button {
+    display: block;
+}
+
+.show-all .fetch-more-button {
+    display: none;
+}
+
+.show-all .sub-breed-image:nth-child(n + 6) {
+    display: block;
+}
+
+.sub-breed-image:last-child {
+    display: block;
+}
+
+.sub-breed-image img {
+    width: 100%;
+}
+
+#doogle {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#title {
+    font-size: 100px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+#breed {
+    font-size: 20px;
+    border: 1px #CCC solid;
+    border-radius: 10px;
+    padding: 8px 8px 4px 8px;
+    margin-bottom: 20px;
+}
+
+#fetchbutton {
+    -webkit-appearance: none;
+    font-size: 20px;
+    background-color: transparent;
+    border: 0;
+    background-image: url(/aesthetics/bone.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 60px 35px;
+}
+
+#searchform {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 70px;
+    padding-left: 20px;
+}
+
+.dog-name {
+    padding-top: 70px;
+    padding-left: 20px;
+    font-size: 20px;
+
+}
+
+.sub-breed:first-child .dog-name {
+    padding-top: 0;
+}
+
+#scooby {
+    padding-left: 20px;
+    padding-top: 120px;
+}
+
+#dooggle {
+    box-sizing: border-box;
+    height: 172px;
+    width: 90px;
+    padding-top: 40px;
+}
+
+#homebutton {
+    background-size: cover;
+    background-image: url(/aesthetics/home.png);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    width: 70px;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+
+}
+
+.top-bar {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#results-container {
+    margin-top: 150px;
+}
+
+.buttons-container {
+    position: static;
+}
+
+@media only screen and (max-width: 600px) {
+    .sub-breed-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

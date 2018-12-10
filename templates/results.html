@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+<div id="results-container" class="sub-breeds {% if individual %} individual {% endif %}" >
+{% for breed in data %}
+    <div class="sub-breed" data-breed="{{ breed.name }}">
+    <h2 class="dog-name">{{ breed.name }}</h2>
+    <div class="sub-breed-images">
+    {% for image in breed.images %}
+    <div class="sub-breed-image">
+        <span class="sizer"></span>
+        <img src="{{ image }}">
+    </div>
+    {% endfor %}
+
+    <div class="sub-breed-image buttons-container">
+        <span class="sizer"></span>
+        <button class="fetch-more-button fetch-button" data-breed="{{ breed.name }}">Fetch more!</button>
+        <button class="fetch-less-button fetch-button" data-breed="{{ breed.name }}">Fetch less!</button>
+    </div>
+
+    </div>
+    </div>
+{% endfor %}
+</div>
+
+<div class="top-bar">
+    <h1 class="page-title">{{ title }}</h1>
+  <a href="/" id="homebutton">home</a>
+</div>
+
+
+<script src="/aesthetics/results.js"></script>

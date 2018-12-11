@@ -21,6 +21,7 @@ h1 {
 .sub-breed-images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    position: relative;
 }
 
 .sizer {
@@ -199,6 +200,10 @@ h1 {
 
 .buttons-container {
     position: static;
+}
+
+.sub-breeds:not(.individual) .sub-breed .fetch-button {
+    position: absolute;
 }
 
 @media only screen and (max-width: 600px) {
